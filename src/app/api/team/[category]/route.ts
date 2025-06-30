@@ -10,11 +10,11 @@ type Member = {
 type TeamData = Record<string, Member[]>;
 
 export function GET(
-  _: NextRequest,
-  { params }: { params: { category: string } }
+  req: NextRequest,
+  context: { params: { category: string } }
 ) {
   const team = rawTeam as TeamData;
-  const category = params.category;
+  const { category } = context.params;
   const data = team[category];
 
   if (!data) {
