@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import blogs from "@/data/blogs.json";
 
 export async function GET(
-  req: NextRequest,
+   req: Request,
   { params }: { params: { id: string } }
 ): Promise<NextResponse> {
   const blog = blogs.find((b) => b.id === params.id);
