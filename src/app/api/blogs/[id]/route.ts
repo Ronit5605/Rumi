@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import blogs from "@/data/blogs.json";
 
-export function GET(
+export async function GET(
   req: NextRequest,
   context: { params: { id: string } }
 ) {

@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import galleryDataRaw from "@/data/gallary.json";
 
 type GalleryImage = { img: string; event: string };
-
 type GalleryData = Record<string, GalleryImage[]>;
 
 const galleryData: GalleryData = galleryDataRaw;
@@ -13,7 +12,7 @@ export function GET(request: NextRequest) {
   const event = searchParams.get("event");
 
   if (!year || !galleryData[year]) {
-    return NextResponse.json([], { status: 200 }); // Return empty array if year missing/invalid
+    return NextResponse.json([], { status: 200 }); // empty list for invalid year
   }
 
   let images = galleryData[year];

@@ -9,7 +9,7 @@ type Member = {
 
 type TeamData = Record<string, Member[]>;
 
-export function GET(
+export async function GET(
   req: NextRequest,
   context: { params: { category: string } }
 ) {
