@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1b1b1b;
+  padding: 0.8rem 2rem;
+  border-bottom: 3px solid orange;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navLinks a:hover {
+  color: orange;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.socialIcons a:hover {
+  color: orange;
+}

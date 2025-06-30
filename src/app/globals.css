@@ -1,0 +1,21 @@
+/* Remove default margins/paddings and borders */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure no border on html and body */
+html, body {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color:  linear-gradient(
+    135deg,
+    #000000 0%,
+    #1b0000 30%,
+    #3c0000 60%,
+    #000000 100%
+  ); /* or your preferred dark gradient */
+  overflow-x: hidden;
+}

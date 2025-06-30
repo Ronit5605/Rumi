@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #1b0000 30%,
+    #3c0000 60%,
+    #000000 100%
+  );
+  min-height: 100vh;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.3rem;
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #ffae00;
+  margin: 0.4rem auto 0;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #ccc;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown-group label {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+select {
+  background-color: black;
+  color: white;
+  border: 2px solid orange;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.photo-card {
+  border-radius: 1px 12px 12px 1px ;
+  overflow: hidden;
+ background: linear-gradient(135deg, #C84901 0%, #F8BE87 51%, #C04D0A 100%);
+  padding: 10px 0px 10px 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.enlarged {
+  width: 70vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0px 30px linear-gradient(135deg, #C84901 0%, #F8BE87 51%, #C04D0A 100%);;
+}
+
+@media (max-width: 900px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .enlarged {
+    width: 90vw;
+  }
+}

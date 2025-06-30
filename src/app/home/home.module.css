@@ -1,0 +1,1021 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+  background:  linear-gradient(
+    135deg,
+    #000000 0%,
+    #1b0000 30%,
+    #3c0000 60%,
+    #000000 100%);
+
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  height: 450px;
+  background-image: url('/some2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.spark {
+  color: orange;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  text-align: left;
+}
+
+/* Main Content */
+.content {
+  padding: 2rem;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.card,
+.cardHighlight {
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
+  max-width: 220px;
+  min-height: 160px;
+  font-size: 0.9rem;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card::before,
+.cardHighlight::before {
+  content: '"';
+  font-size: 5rem;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  opacity: 0.2;
+  color: white;
+  font-family: serif;
+}
+
+.card {
+  background: linear-gradient(
+    135deg,
+    #1a1a1a 0%,
+    #2b2b2b 30%,
+    #444 50%,
+    #2b2b2b 70%,
+    #1a1a1a 100%
+  );
+  color: white;
+}
+
+.cardHighlight {
+  background: linear-gradient(
+    135deg,
+    orange 0%,
+    #ffae42 30%,
+    #fff5e1 50%,
+    #ffae42 70%,
+    orange 100%
+  );
+  color: black;
+  font-weight: bold;
+}
+
+.cardHighlight::before {
+  color: black;
+}
+
+.card:hover,
+.cardHighlight:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 165, 0, 0.4);
+}
+
+/* About Section */
+.about {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.us {
+  color: orange;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  max-width: 150%;
+  top: 50px;
+  right: 10px;
+  width: 500px;
+  height: 300px;
+  background: linear-gradient(to bottom right, #ffa500, #ff8000);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 60% 0%);
+  border-radius: 0 12px 12px 0;
+  min-width: 50%;
+  min-height: 100%;
+  z-index: 1;
+}
+
+.aboutCardDark {
+  position: relative;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #eeeeee;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 18px rgb(245, 245, 245);
+  z-index: 2;
+  max-width: 80%;
+  margin-left: 0;
+}
+/*faculty card design*/
+.facultyHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whiteText {
+  color: #f5f0eb;
+}
+
+.orangeText {
+  color: #ff7a00;
+  font-weight: bold;
+  margin: 0 0.4rem;
+}
+
+.faculty {
+  padding: 2rem 1rem;
+  margin-top: 5rem;
+}
+
+.faculty h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.facultyHighlight {
+  color: orange;
+}
+
+.facultyGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.facultyCardMini {
+  width: 400px;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facultyCardMini:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+.facultyImageMini {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid #333;
+}
+
+.facultyNameMini {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0.75rem 0 0.25rem 0;
+}
+
+.facultyTitleMini {
+  font-size: 0.85rem;
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
+
+.facultyExpanded {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.facultyMainCard {
+  background: linear-gradient(135deg, rgba(108, 94, 91, 0.4), rgba(59, 55, 55, 0.6));
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  flex: 1;
+  max-width: 900px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.mainImage {
+  width: 230px;
+  height: 100%;
+  object-fit: cover;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mainImage img {
+  padding: 10px;
+}
+
+.facultyTextBlock {
+  padding: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.facultyName {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 0.25rem;
+}
+
+.facultyTitle {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.facultyMessage {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.thumbnailSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  border-color: orange;
+}
+
+/*collabration section*/
+.collabSection {
+  margin-top: 4rem;
+  padding-left: 1.5rem;
+  text-align: left;
+  margin-bottom: 10rem  ;
+}
+
+.collabTitleBlock {
+  margin-bottom: 1rem;
+}
+
+.collabLine {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, orange, white);
+  margin-bottom: 2rem;
+}
+
+.collabHeading {
+  font-size: 3rem;
+  /* color: white; */
+  font-weight: bold;
+}
+
+.collabScroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.collabScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.collabScroll img {
+  height: 180px;
+  width: 500px;
+  flex-shrink: 0;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.collabScroll img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* === Alumni Section Grid === */
+.alumniGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 2fr));
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 5rem;
+  padding: 0 1rem; /* Add some horizontal padding for smaller screens */
+}
+
+/* === Alumni Card === */
+.alumniCard {
+  background: linear-gradient(
+    135deg,
+    orange 0%,
+    #ffae42 30%,
+    #fff5e1 50%,
+    #ffae42 70%,
+    orange 100%
+  );
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.alumniCard:hover {
+  transform: scale(1.05);
+}
+
+.alumniLogoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alumniLogo {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.alumniName {
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* === Responsive Font/Spacing Tweaks === */
+@media (max-width: 768px) {
+  .alumniName {
+    font-size: 0.9rem;
+  }
+
+  .alumniCard {
+    max-width: 160px;
+    padding: 0.75rem;
+  }
+
+  .alumniLogo {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alumniCard {
+    max-width: 140px;
+  }
+
+  .alumniLogo {
+    height: 90px;
+  }
+
+  .alumniName {
+    font-size: 0.85rem;
+  }
+}
+
+
+/*events highlight*/
+/* === Events Section Styles === */
+.eventsSection {
+  padding: 2rem 1rem;
+  color: white;
+  margin-top: 100px;
+}
+
+.eventsTitleBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.eventsHeading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.eventsLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, orange, white);
+  margin: 0 1rem;
+}
+
+/* === Responsive Grid Layout === */
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* === Individual Event Card === */
+.eventCard {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1; /* Keeps square shape */
+  position: relative;
+}
+
+.eventImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: orange;
+  padding: 5px;
+}
+
+.eventImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #ccc;
+  display: block;
+  border-radius: 8px;
+}
+
+/* === Responsive Typography Tweaks === */
+@media (max-width: 768px) {
+  .eventsHeading {
+    font-size: 1.25rem;
+  }
+
+  .eventsLine {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventsTitleBlock {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .eventsHeading {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .eventsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .eventCard {
+    max-width: 180px;
+  }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .alumniHeading {
+    font-size: 1.4rem;
+  }
+
+  .alumniCard {
+    width: 130px;
+    height: 100px;
+  }
+
+  .alumniName {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .collabHeading {
+    font-size: 1.4rem;
+  }
+
+  .collabScroll {
+    gap: 1rem;
+  }
+
+  .collabScroll img {
+    height: 60px;
+  }
+
+  .collabSection {
+    padding-left: 1rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .about::before {
+    width: 200px;
+    height: 130px;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .aboutCardDark {
+    font-size: 0.95rem;
+    padding: 1.5rem;
+  }
+  .facultyExpanded {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .facultyMainCard {
+    flex-direction: column;
+  }
+
+  .mainImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnailSidebar {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+/*guest speaker*/
+.section {
+  padding: 3rem 1rem;
+  background: #000;
+  color: white;
+}
+
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.orange {
+  color: orange;
+}
+
+.speakerGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.speakerCard {
+  width: 100px;
+  height: 100px;
+  background: #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(255, 165, 0, 0.3);
+}
+
+.speakerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Testimony Blocks */
+.testimonyBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.textBlock {
+  flex: 1;
+  min-width: 250px;
+}
+
+.textBlock h4 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.textBlock p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.imageBlock {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.imageBlock img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonyBlock {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .speakerCard {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.contactSection {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+.contactGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.memberCard {
+  text-align: center;
+}
+
+.memberImageWrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #ccc;
+  background: #222;
+}
+
+.memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.memberRole {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.memberName {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.buttonContainer {
+  margin: 2rem 0;
+}
+
+.meetButton {
+  background: orange;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.meetButton:hover {
+  background: #ff9f1a;
+}
+
+.quote {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*form*/
+
+.formBox {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid orange;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: white;
+  border-radius: 8px;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.input,
+.textarea {
+  padding: 0.7rem;
+  border-radius: 4px;
+  border: none;
+  background: #f2f2f2;
+  color: #000;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.textarea {
+  height: 120px;
+  resize: none;
+}
+
+.submitButton {
+  padding: 0.6rem 1rem;
+  background: linear-gradient(to right, orange, gold);
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  background: linear-gradient(to right, gold, orange);
+}
+
+.error {
+  color: #ff7373;
+  font-size: 0.9rem;
+}
+
+.thanks {
+  text-align: center;
+  color: lightgreen;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+
+/*footer*/
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background: #1c1c1c;
+  color: white;
+  gap: 2rem;
+}
+
+.column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.logoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orange;
+  margin: 0;
+}
+
+.subText {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.heading {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.8rem;
+}
+
+.linkList a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.linkList a:hover {
+  color: white;
+}
+
+/* SOCIALS */
+.socialHeading {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.socialList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socialList li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #ccc;
+}
+
+.socialList li:hover {
+  color: white;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+/* SUBSCRIBE FORM */
+.subscribeForm {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.arrowBtn {
+  background: linear-gradient(to right, orange, gold);
+  border: none;
+  border-radius: 0 20px 20px 0;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subTextSmall {
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
