@@ -5,7 +5,7 @@ export async function GET(
   req: NextRequest,
   context: { params: { id: string } }
 ) {
-  const id = context.params.id;
+  const { id } = context.params;
   const blog = blogs.find((b) => b.id === id);
 
   if (!blog) {

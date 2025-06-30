@@ -6,17 +6,16 @@ type GalleryData = Record<string, GalleryImage[]>;
 
 const galleryData: GalleryData = galleryDataRaw;
 
-export function GET(request: NextRequest) {
+export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const year = searchParams.get("year");
   const event = searchParams.get("event");
 
   if (!year || !galleryData[year]) {
-    return NextResponse.json([], { status: 200 }); // empty list for invalid year
+    return NextResponse.json([]);
   }
 
   let images = galleryData[year];
-
   if (event && event !== "All") {
     images = images.filter((img) => img.event === event);
   }

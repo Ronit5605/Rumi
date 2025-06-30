@@ -8,6 +8,5 @@ export async function GET() {
     imageUrl,
     excerpt,
   }));
-
   return NextResponse.json(brief);
 }
