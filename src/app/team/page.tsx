@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import "./global.css";
 
@@ -20,10 +21,17 @@ export default function TeamPage() {
   const [activeCategory, setActiveCategory] = useState("Faculties");
 
   useEffect(() => {
-    fetch(`/api/team/${encodeURIComponent(activeCategory)}`) // ✅ updated from localhost
-      .then((res) => res.json())
-      .then((data) => setTeam(data))
-      .catch((err) => console.error("Error fetching team:", err));
+    const fetchTeam = async () => {
+      try {
+        const res = await fetch(`/api/team?category=${encodeURIComponent(activeCategory)}`);
+        const data = await res.json();
+        setTeam(data);
+      } catch (err) {
+        console.error("Error fetching team:", err);
+      }
+    };
+
+    fetchTeam();
   }, [activeCategory]);
 
   return (
@@ -44,7 +52,7 @@ export default function TeamPage() {
             <div className="back-layer"></div>
             <img
               className="front-image"
-              src="/images/some2.jpg" // ✅ use public folder path
+              src="/images/some2.jpg"
               alt="Team"
             />
           </div>
@@ -71,7 +79,7 @@ export default function TeamPage() {
           {team.map((member, index) => (
             <div className="card" key={index}>
               <img
-                src={`/images/${member.img}`} // ✅ Now loads from /public/images
+                src={`/images/${member.img}`}
                 alt={member.name}
               />
               <div className="info">

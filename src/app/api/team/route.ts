@@ -9,17 +9,15 @@ type Member = {
 
 type TeamData = Record<string, Member[]>;
 
-export async function GET(
-  req: NextRequest,
-  context: { params: { category: string } }
-) {
-  const team = rawTeam as TeamData;
-  const { category } = context.params;
-  const data = team[category];
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const category = searchParams.get("category");
 
-  if (!data) {
+  const team = rawTeam as TeamData;
+
+  if (!category || !team[category]) {
     return NextResponse.json({ error: "Category not found" }, { status: 404 });
   }
 
-  return NextResponse.json(data);
+  return NextResponse.json(team[category]);
 }
