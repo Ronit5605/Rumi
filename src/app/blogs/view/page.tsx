@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import "./blognew.css";
 
 interface BlogPost {
@@ -12,14 +12,16 @@ interface BlogPost {
 }
 
 export default function BlogDetail() {
-  const { id } = useParams() as { id: string };
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
+
   const [blog, setBlog] = useState<BlogPost | null>(null);
   const [error, setError] = useState(false);
 
   useEffect(() => {
     if (!id) return;
 
-    fetch(`/api/blogs/${id}`)
+    fetch(`/api/blogs?id=${id}`)
       .then(async (res) => {
         const data = await res.json();
         if (!res.ok || data.error) throw new Error(data.error || "Failed to load blog");

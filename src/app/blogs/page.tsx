@@ -8,7 +8,7 @@ interface BlogPost {
   id: string;
   title: string;
   excerpt: string;
-  imageUrl: string; // should now be a filename like "blog1.jpg"
+  imageUrl: string;
 }
 
 export default function Blogs() {
@@ -16,7 +16,7 @@ export default function Blogs() {
   const router = useRouter();
 
   useEffect(() => {
-    fetch("/api/blogs") // ✅ updated from API_BASE to direct API route
+    fetch("/api/blogs")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) setBlogs(data);
@@ -26,7 +26,7 @@ export default function Blogs() {
   }, []);
 
   const handleReadMore = (id: string) => {
-    router.push(`/blogs/${id}`);
+    router.push(`/blogs/view?id=${id}`);
   };
 
   return (
@@ -43,7 +43,7 @@ export default function Blogs() {
         {blogs.map((blog) => (
           <div className="blog-card" key={blog.id}>
             <img
-              src={`/images/${blog.imageUrl}`} // ✅ loads from /public/images/
+              src={`/images/${blog.imageUrl}`}
               alt={blog.title}
               className="blog-card-image"
             />
