@@ -2,8 +2,6 @@
 "use client";
 import dynamic from "next/dynamic";
 
-
-
 import HeroSection from "./heroSection";
 import CardsSection from "./CardsSection";
 import AboutSection from "./AboutSection";
@@ -16,7 +14,9 @@ import ContactUs from "./ContactUs";
 import ContactForm from "./form";
 import Footer from "./Footer";
 
-const EventHighlights = dynamic(() => import("./EventHighlights"), { ssr: false });
+const EventHighlights = dynamic(() => import("./EventHighlights"), {
+  ssr: false,
+});
 export default function HomePage() {
   return (
     <div className={styles.container}>
@@ -31,8 +31,8 @@ export default function HomePage() {
         <GuestSpeakers />
         <ContactUs />
         <ContactForm />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -35,7 +35,7 @@ export default function Footer() {
 
       {/* USEFUL LINKS */}
       <div className={styles.column}>
-        <h3 className={styles.heading}>Useful links</h3>
+        <h3 className={styles.socialHeading}>Useful links</h3>
         <ul className={styles.linkList}>
           <li><Link href="/">Home</Link></li>
           <li><Link href="/home#about">About Us</Link></li>
