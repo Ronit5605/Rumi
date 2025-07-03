@@ -10,6 +10,7 @@
   padding: 0.8rem 2rem;
   border-bottom: 3px solid orange;
   color: white;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -76,11 +77,23 @@
   }
 
   .navLinks {
-    display: none;
+    overflow: hidden;
+    max-height: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1b1b1b;
+    padding: 0 2rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: max-height 0.4s ease, padding 0.3s ease;
   }
 
   .navLinks.show {
-    display: flex;
+    max-height: 600px;
+    padding: 1rem 2rem;
   }
 
   .menuOption {

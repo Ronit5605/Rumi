@@ -26,11 +26,11 @@ export default function Navbar() {
       </div>
 
       <nav className={`${styles.navLinks} ${click ? styles.show : ''}`}>
-        <Link href="/">Home</Link>
-        <Link href="/events">Events</Link>
-        <Link href="/team">Our Team</Link>
-        <Link href="/blogs">Blogs</Link>
-        <Link href="/gallary">Gallary</Link>
+        <Link href="/" onClick={() => setClick(false)}>Home</Link>
+        <Link href="/events" onClick={() => setClick(false)}>Events</Link>
+        <Link href="/team" onClick={() => setClick(false)}>Our Team</Link>
+        <Link href="/blogs" onClick={() => setClick(false)}>Blogs</Link>
+        <Link href="/gallary" onClick={() => setClick(false)}>Gallary</Link>
       </nav>
 
       <button
