@@ -2,7 +2,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Navbar from './Navbar';
-import Footer from './home/Footer';
 
 export const metadata: Metadata = {
   title: 'My App',

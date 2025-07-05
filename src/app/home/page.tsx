@@ -14,6 +14,7 @@ import styles from "./home.module.css";
 import GuestSpeakers from "./GuestSpeakers";
 import ContactUs from "./ContactUs";
 import ContactForm from "./form";
+import Footer from "./Footer";
 
 const EventHighlights = dynamic(() => import("./EventHighlights"), { ssr: false });
 export default function HomePage() {
@@ -32,6 +33,7 @@ export default function HomePage() {
         <ContactForm />
 
       </main>
+      <Footer />
     </div>
   );
 }
