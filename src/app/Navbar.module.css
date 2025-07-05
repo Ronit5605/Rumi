@@ -1,4 +1,8 @@
 .navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,6 +10,7 @@
   padding: 0.8rem 2rem;
   border-bottom: 3px solid orange;
   color: white;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -28,13 +33,16 @@
 
 .navLinks {
   display: flex;
+  flex-direction: column; /*pratik*/
   gap: 2rem;
 }
 
 .navLinks a {
-  color: white;
+  display: flex; /*pratik*/
+  flex-direction: column; /*pratik*/
   text-decoration: none;
   font-weight: 500;
+  color: white;
 }
 
 .navLinks a:hover {
@@ -54,3 +62,62 @@
 .socialIcons a:hover {
   color: orange;
 }
+
+/*pratik*/
+.menuOption{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+
+@media (max-width: 600px) {
+  .socialIcons {
+    display: none;
+  }
+
+  .navLinks {
+    overflow: hidden;
+    max-height: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1b1b1b;
+    padding: 0 2rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .navLinks.show {
+    max-height: 600px;
+    padding: 1rem 2rem;
+  }
+
+  .menuOption {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 600px) {
+  .menuOption {
+    display: none;
+  }
+
+  .navLinks {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .navLinks a {
+    flex-direction: row;
+  }
+}
+
